@@ -23,6 +23,10 @@ a:hover {
 }
 
 body {
+  background-image: url("/desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   margin: 0;
   display: flex;
   position: relative;
@@ -36,24 +40,6 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -71,4 +57,64 @@ button:focus-visible {
   height: 500px;
   width:auto;
 
+}
+@media  screen and (max-width:320px) {
+
+  body {
+    background-image: url("/smartphone-portrait.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    display: flex;
+    position: relative;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+}
+@media  (min-width:321px) and (max-width:576px) {
+
+  body {
+    background-image: url("/smartphone-landscape.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    display: flex;
+    position: relative;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+}
+@media  (min-width:577px) and (max-width:768px) {
+
+  body {
+    background-image: url("/tablet.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    display: flex;
+    position: relative;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+}
+@media  (min-width:769px) and (max-width:1279px) {
+
+  body {
+    background-image: url("/laptop.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    display: flex;
+    position: relative;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
 }

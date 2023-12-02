@@ -1,11 +1,12 @@
 import { useState,  useEffect }  from 'react';
 import './App.css'
-import Image from './components/Image';
 function App() {
   const [windowSize, setWindowSize] = useState([
     window.innerWidth,
     window.innerHeight,
   ]);
+  //Media query state
+  const [mediaState , setMediaState] = useState("@media (min-width: 992px) and (max-width: 1199px)")
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
@@ -20,13 +21,15 @@ function App() {
 
   return (
     <>
-    <Image />
+   
         
     <div className='media-stats'>
-    <h2 className="heading">Media Query app</h2>
+    <h2 className="heading">Matt Media Query app</h2>
 
-      <h2>Width: {windowSize[0]}</h2>
-      <h2>Height: {windowSize[1]}</h2>
+      <h2>Width: {windowSize[0]}px</h2>
+      <h2>Height: {windowSize[1]}px</h2>
+      <p>The Media Query is:</p>
+      <p> {mediaState}</p>
     </div>
     </>
   )

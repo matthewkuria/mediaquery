@@ -47,8 +47,11 @@
   position: absolute;
   align-items: center;
   justify-content: center;
-  top: 40vh;
-  left:43vw;
+  top: 30vh;
+  left:35vw;
 
   
+}
+.media-stats >p{
+color:red;
 }
