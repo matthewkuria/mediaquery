@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect }  from 'react';
+import { useState,  useEffect }  from 'react';
 
 import './App.css'
 
@@ -7,7 +7,6 @@ function App() {
     window.innerWidth,
     window.innerHeight,
   ]);
-
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
@@ -19,15 +18,13 @@ function App() {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
-  
+
   return (
-    <>
-    <div className="heading">
-      <h2>Media Query app</h2>
-    </div>
+    <>    
+    <h2 className="heading">Media Query app</h2>
     <div>
-      <h2>Width: {windowSize.current[0]}</h2>
-      <h2>Height: {windowSize.current[1]}</h2>
+      <h2>Width: {windowSize[0]}</h2>
+      <h2>Height: {windowSize[1]}</h2>
     </div>
     </>
   )
